@@ -5,6 +5,9 @@ const {postRouter}=require("./routes/posts.routes")
 const {authentication}=require("./middleware/authentication.middleware")
 
 const app=express();
+const cors=require("cors");
+
+app.use(cors())
 
 app.use(express.json());
 app.use("/users",userRouter)
